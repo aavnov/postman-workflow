@@ -1,0 +1,22 @@
+{
+  "info": {
+    "_postman_id": "801dc234-752c-4749-93f9-8b9a866df585",
+    "name": "albums",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "all albums",
+      "_postman_id": "d2c9d65c-afbe-4562-836a-d12f39666f0c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
+    }
+  ]
+}
