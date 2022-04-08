@@ -1,0 +1,27 @@
+name: run Postman API tests
+on: 
+  push:
+    branches:
+      - 'main'
+      - 'feature/**'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: start the application
+        run: |
+          json-server --watch db.json
+
+      - name: run Postman tests
+        - uses: actions/checkout@master
+        - uses: matt-ball/newman-action@master
+          with:
+            collection: "Postman Collections/albums.json"
+
