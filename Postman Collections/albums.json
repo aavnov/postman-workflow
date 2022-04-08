@@ -32,7 +32,7 @@
       "response": []
     },
     {
-      "name": "filterByTitle Copy",
+      "name": "filterByYear",
       "id": "cd471942-28af-4a94-9e0a-b42d255e3f3d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
