@@ -40,7 +40,23 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "http://localhost:3004/albums"
+        "url": {
+          "raw": "http://localhost:3004/albums?year_like=1963",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3004",
+          "path": [
+            "albums"
+          ],
+          "query": [
+            {
+              "key": "year_like",
+              "value": "1963"
+            }
+          ]
+        }
       },
       "response": []
     }
