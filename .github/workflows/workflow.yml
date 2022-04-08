@@ -14,13 +14,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-
-      - name: install dependencies
-        run: |
-          npm install
           
       - name: start the application
         run: |
+          npm install
           npm start
 
       - name: run Postman tests

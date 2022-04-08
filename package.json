@@ -6,6 +6,9 @@
   "scripts": {
     "start": "json-server --watch db.json --port 3000"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Dennis Whalen",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
 }
