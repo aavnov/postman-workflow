@@ -17,6 +17,7 @@ jobs:
 
       - name: start the application
         run: |
+          npm install
           json-server --watch db.json
 
       - name: run Postman tests
