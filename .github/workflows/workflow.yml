@@ -20,7 +20,6 @@ jobs:
           json-server --watch db.json
 
       - name: run Postman tests
-        uses: actions/checkout@master
         uses: matt-ball/newman-action@master
         with:
           collection: "Postman Collections/albums.json"
