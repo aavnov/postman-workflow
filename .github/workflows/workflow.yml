@@ -15,9 +15,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
           
-      - name: start the application
+      - name: install dependencies
         run: |
           npm install
+
+      - name: start the application
+        run: |
           npm start
 
       - name: run Postman tests
