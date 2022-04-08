@@ -18,11 +18,10 @@ jobs:
       - name: install dependencies
         run: |
           npm install
-          npm i json-server
-
+          
       - name: start the application
         run: |
-          json-server --watch db.json
+          npm start
 
       - name: run Postman tests
         uses: matt-ball/newman-action@master
