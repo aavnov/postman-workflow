@@ -18,6 +18,7 @@ jobs:
       - name: install dependencies
         run: |
           npm install
+          npm i json-server
 
       - name: start the application
         run: |
