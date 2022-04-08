@@ -17,6 +17,19 @@
         "url": "http://localhost:3004/albums"
       },
       "response": []
+    },
+    {
+      "name": "all albums Copy",
+      "id": "61f511be-2230-4497-b5b0-bdcb5f8f383c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3004/albums"
+      },
+      "response": []
     }
   ]
 }
