@@ -4,8 +4,12 @@ on:
     branches:
       - 'main'
       - 'feature/**'
+    paths-ignore:
+      - "Postman Collections/**"
   pull_request:
     branches: [main]
+      paths-ignore:
+      - "Postman Collections/**"
   workflow_dispatch:
 
 jobs:
