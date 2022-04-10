@@ -14,14 +14,14 @@
             "id": "8c5bb5cd-9256-4e8d-8005-f6e3abd79d33",
             "exec": [
               "pm.test(\"Status code is 200\", function () {",
-              "    pm.response.to.have.status(200);",
+              "    pm.response.to.have.status(201);",
               "});"
             ],
             "type": "text/javascript"
           }
         }
       ],
-      "_postman_id": "f792fc35-bd70-4944-aad3-b70519cc3cc7",
+      "id": "f792fc35-bd70-4944-aad3-b70519cc3cc7",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
