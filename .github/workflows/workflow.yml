@@ -28,5 +28,7 @@ jobs:
       - name: run Postman tests
         uses: matt-ball/newman-action@master
         with:
-          collection: "Postman Collections/*.json"
+          collection: 
+          - "Postman Collections/albums.json"
+          - "Postman Collections/posts.json"
 
