@@ -25,10 +25,15 @@ jobs:
         run: |
           npm start
 
-      - name: run Postman tests
+      - name: run Album Postman collection
         uses: matt-ball/newman-action@master
         with:
           collection: 
           - "Postman Collections/albums.json"
+
+      - name: run Posts Postman collection
+        uses: matt-ball/newman-action@master
+        with:
+          collection: 
           - "Postman Collections/posts.json"
 
