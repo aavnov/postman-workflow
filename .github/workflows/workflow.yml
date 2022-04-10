@@ -25,13 +25,14 @@ jobs:
         run: |
           npm start
 
-      - name: run Album Postman collection
+      - name: run Album Postman collection from repo
         uses: matt-ball/newman-action@master
         with:
           collection: "Postman Collections/albums.json"
 
-      - name: run Posts Postman collection
+      - name: run Album Postman collection from Team Workspace
         uses: matt-ball/newman-action@master
         with:
-          collection: "Postman Collections/posts.json"
+          apiKey: ${{ secrets.postmanApiKey }}
+          collection: 2080861-801dc234-752c-4749-93f9-8b9a866df585
 
