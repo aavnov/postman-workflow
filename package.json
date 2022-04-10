@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server -p 3004 db.json >> ./json-server.log 2>&1 </dev/null &"
+    "start": "json-server -p 3004 db.json >> ./json-server.log 2>&1 </dev/null &",
+    "startlocal": "json-server -p 3004 db.json"
   },
   "author": "Dennis Whalen",
   "license": "ISC",
