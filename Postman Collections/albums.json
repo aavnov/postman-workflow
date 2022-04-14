@@ -28,7 +28,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "http://localhost:3004/albums"
+        "url": "http://localhost:3005/albums"
       },
       "response": []
     },
