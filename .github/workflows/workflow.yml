@@ -25,7 +25,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: clue/json-server
-          options: -v ${{ github.workspace }}/db.json:/wodata/db.json -p 3005:80
+          options: -v ${{ github.workspace }}/db.json:/data/db.json -p 3005:80
 
       - name: run Album Postman collection from repo
         uses: matt-ball/newman-action@master
