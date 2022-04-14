@@ -14,3 +14,5 @@
   http://localhost:3004
 
   Type s + enter at any time to create a snapshot of the database
+[0mGET /albums?title_like=please [32m200[0m 7.051 ms - 105[0m
+[0mGET /albums?year_like=1963 [32m200[0m 3.446 ms - 208[0m

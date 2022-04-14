@@ -20,8 +20,10 @@ jobs:
           npm install
 
       - name: start the application
-        run: |
-          npm start
+        uses: addnab/docker-run-action@v3
+        with:
+          image: clue/json-server
+          options: -v ${{ github.workspace }}/db.json:/wodata/db.json -p 3005:80
 
       - name: run Postman tests
         uses: matt-ball/newman-action@master

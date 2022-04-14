@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server -p 3004 db.json >> ./json-server.log 2>&1 </dev/null &"
+    "start": "docker run -d -p 3005:80 -v /Users/denniswhalen/postman-workflow/db.json:/data/db.json clue/json-server"
   },
   "author": "Dennis Whalen",
   "license": "ISC",
