@@ -23,11 +23,15 @@ jobs:
           echo "here: " ${{ github.workspace }}
           docker run -d -p 3005:80 -v ${{ github.workspace }}/db.json:/data/db.json clue/json-server
 
-      # - name: start the application
-      #   uses: addnab/docker-run-action@v3
-      #   with:
-      #     image: clue/json-server
-      #     options: -v ${{ github.workspace }}/db.json:/data/db.json -p 3005:80
+      # - name: start the app
+      #   run: |
+      #     docker run -d -p 3005:80 -v ${{ github.workspace }}/db.json:/data/db.json clue/json-server
+
+      - name: start the app
+        uses: addnab/docker-run-action@v3
+        with:
+          image: clue/json-server
+          options: -p 3005:80 -v ${{ github.workspace }}/db.json:/data/db.json clue/json-server
 
       - name: run Album Postman collection from repo
         uses: matt-ball/newman-action@master
