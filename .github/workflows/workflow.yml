@@ -20,8 +20,6 @@ jobs:
       - name: install dependencies
         run: |
           npm install
-          echo "here: " ${{ github.workspace }}
-          docker run -d -p 3005:80 -v ${{ github.workspace }}/db.json:/data/db.json clue/json-server
 
       # - name: start the app
       #   run: |
