@@ -10,7 +10,7 @@ npm install -g newman
 
 # Start the application
 ```
-json-server --watch db.json
+json-server --watch db.json --port 3004
 ```
 
 # Run the postman tests

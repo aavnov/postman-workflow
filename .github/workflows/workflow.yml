@@ -4,6 +4,8 @@ on:
     branches:
       - 'main'
       - 'feature/**'
+    paths-ignore:
+      - 'Postman Collections/**'
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -25,8 +27,14 @@ jobs:
           image: clue/json-server
           options: -v ${{ github.workspace }}/db.json:/wodata/db.json -p 3005:80
 
-      - name: run Postman tests
+      - name: run Album Postman collection from repo
         uses: matt-ball/newman-action@master
         with:
           collection: "Postman Collections/albums.json"
+
+      - name: run Album Postman collection from Team Workspace
+        uses: matt-ball/newman-action@master
+        with:
+          apiKey: ${{ secrets.postmanApiKey }}
+          collection: 2080861-801dc234-752c-4749-93f9-8b9a866df585
 

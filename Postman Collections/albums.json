@@ -7,6 +7,20 @@
   "item": [
     {
       "name": "all albums",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "39edef03-840c-4d86-b959-b261e25990c6",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "d2c9d65c-afbe-4562-836a-d12f39666f0c",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -14,7 +28,65 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "http://localhost:3004/albums"
+        "url": "http://localhost:3005/albums"
+      },
+      "response": []
+    },
+    {
+      "name": "filterByTitle",
+      "id": "61f511be-2230-4497-b5b0-bdcb5f8f383c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3005/albums?title_like=please",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3005",
+          "path": [
+            "albums"
+          ],
+          "query": [
+            {
+              "key": "title_like",
+              "value": "please"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "filterByYear",
+      "id": "cd471942-28af-4a94-9e0a-b42d255e3f3d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3005/albums?year_like=1963",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3005",
+          "path": [
+            "albums"
+          ],
+          "query": [
+            {
+              "key": "year_like",
+              "value": "1963"
+            }
+          ]
+        }
       },
       "response": []
     }

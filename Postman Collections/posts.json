@@ -1,0 +1,36 @@
+{
+  "info": {
+    "_postman_id": "8a9ee256-7d3a-4f61-8e7d-2ba9ddf7bf03",
+    "name": "posts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "get all posts",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "8c5bb5cd-9256-4e8d-8005-f6e3abd79d33",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "f792fc35-bd70-4944-aad3-b70519cc3cc7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3004/posts"
+      },
+      "response": []
+    }
+  ]
+}
