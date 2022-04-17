@@ -20,7 +20,7 @@ jobs:
 
       - name: start the app
         run: |
-          npm start
+          docker run -d -p 3005:80 -v ${{ github.workspace }}/db.json:/data/db.json clue/json-server
 
       # - name: start the app
       #   uses: addnab/docker-run-action@v3
