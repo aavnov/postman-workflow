@@ -34,6 +34,20 @@
     },
     {
       "name": "filterByTitle",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "f216a052-3d82-4c61-91b0-8217010ec3ee",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "61f511be-2230-4497-b5b0-bdcb5f8f383c",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
