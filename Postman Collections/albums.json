@@ -63,6 +63,20 @@
     },
     {
       "name": "filterByYear",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "e6bd24cc-f6cc-4b45-b138-199e6170917f",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "cd471942-28af-4a94-9e0a-b42d255e3f3d",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
