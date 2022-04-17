@@ -17,9 +17,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
           
-      - name: install dependencies
-        run: |
-          npm install
 
       - name: start the app
         run: |
@@ -31,12 +28,12 @@ jobs:
       #     image: clue/json-server
       #     options: -p 3005:80 -v ${{ github.workspace }}/db.json:/data/db.json clue/json-server
 
-      - name: run Album Postman collection from repo
+      - name: run postman tests
         uses: matt-ball/newman-action@master
         with:
           collection: "Postman Collections/albums.json"
 
-      - name: run Album Postman collection from Team Workspace
+      - name: run postman tests from Team Workspace
         uses: matt-ball/newman-action@master
         with:
           apiKey: ${{ secrets.postmanApiKey }}
